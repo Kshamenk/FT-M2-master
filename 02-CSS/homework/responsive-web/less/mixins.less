@@ -1,0 +1,21 @@
+// Mixins acá
+// Mixin para establecer estilos para el heade
+.header-styles(@bg-color, @text-color) {
+    background-color: @bg-color;
+    color: @text-color;
+}
+
+// Mixin para establecer estilos para el botón de registro
+.mybtn(@bg-color, @text-color) {
+    background-color: @bg-color;
+    color: @text-color;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100px;
+    &:hover {
+        background-color: @wild-sand;
+        color:@btn-bg-color;
+    }
+}

@@ -1,0 +1,88 @@
+// Variables
+@phone: ~"@media (max-width: 500px)";
+
+header {
+    background-color: #F1F1F1;
+    .logo {
+        text-align: center;
+        img {
+            width: 80%;
+            margin: 20px 0;
+        }
+    }
+    @media (max-width: 500px) {
+        .logo {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+section {
+    background-color: #fff;
+    padding: 40px;
+    h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 500px) {
+            form {
+                flex-direction: column;
+                input[type="text"], input[type="email"], input[type="password"] {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .register-button {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        &:hover {
+            background-color: darken(#4CAF50, 10%);
+            color: darken(#fff, 10%);
+        }
+    }
+}
+
+// Color pointers
+@nav-bg: @wild-sand;
+@nav-font: @river-bend;
+@nav-border: @sea-shell;
+
+@header-font-color: @ebony-clay;
+@main-font-color: @shuttle-gray;
+@main-border-color: @border-real;
+
+@footer-background: @wild-sand;
+@footer-font-color: @waterloo;
+
+// Color Vars
+@wild-sand: #F6F6F6;
+@river-bend: #454A59;
+@sea-shell: #F1F1F1;
+@ebony-clay: #23293B;
+@shuttle-gray: #5E6164;
+@porcelain: #F6F7F8;
+@waterloo: #81848E;
+@btn-bg-color: #22283A;
+@border-real: #dee2e6;
+
+// Mobile var
+  @phone: (max-width 500px);
