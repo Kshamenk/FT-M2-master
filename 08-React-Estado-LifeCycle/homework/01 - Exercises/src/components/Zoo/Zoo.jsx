@@ -37,8 +37,23 @@ export default function Zoo() {
    }, [])
    
    
-   let handleSpecies = (event)=>{};
-   let handleAllSpecies = (event)=>{}
+   let handleSpecies = (event)=>{
+      let value = event.target.value
+      setZoo({
+         ...zoo,
+         animals: zoo.allAnimals.filter((animal) => animal.specie === value)
+      })
+      
+   };
+   
+   
+   
+   let handleAllSpecies = ()=>{
+    setZoo({
+      ...zoo,
+      animals: zoo.allAnimals
+    })
+   };
 
    
    return (
