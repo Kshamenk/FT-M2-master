@@ -1,3 +1,10 @@
 .App {
    text-align: center;
 }
+.Nav {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+   background-color: #f2f2f2;
+ }
