@@ -38,7 +38,7 @@ botonMostrarAmigos.click(verAmigo);
 //   $.get(`http://localhost:5000/amigos/${idAmigo}`, amigo => {     // se realiza la peticion GET
 //     amigoEncontrado.text(`${amigo.id} - ${amigo.name}`)  // se muestra la información del amigo en un elemento del DOM.
 //   }).fail(error => console.error(error))
-// });
+// }); botonBuscar.click()
 
 botonBuscar.click(() => {
   let id = inputBuscarAmigo.val()
