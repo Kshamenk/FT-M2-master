@@ -21,7 +21,7 @@ export default function App() {
     </div>
   );
 }
-//Es importante tener en cuenta que el componente NavBar se coloca fuera de las rutas porque se quiere que se muestre en todas las páginas de la aplicación. Además, cada ruta tiene su propio elemento que se renderiza cuando la URL coincide con el path de la ruta.
+// NavBar se coloca fuera de las rutas porque se quiere que se muestre en todas las páginas de la aplicación. Además, cada ruta tiene su propio elemento que se renderiza cuando la URL coincide con el path de la ruta.
 
 
 
