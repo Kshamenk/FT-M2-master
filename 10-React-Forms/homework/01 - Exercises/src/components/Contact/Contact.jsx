@@ -34,7 +34,13 @@ export default function Contact() {
     message: '',
   });
 
-  const [errors, setErrors] = React.useState({});
+  const [errors, setErrors] = React.useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+  });
   
 
   function handleChange(e) {
@@ -52,9 +58,11 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const errorsArray = Object.values(errors); // Convertir el objeto errors en un array para medir su longitud
+    const errorsArray = Object.values(errors);
+    console.log(errorsArray) // Convertir el objeto errors en un array para medir su longitud
     if (errorsArray.length === 0) {
-      window.alert('Datos completos'); // Mostrar un mensaje de "Datos completos" si no hay errores
+     const alert = window.alert;
+      alert('Datos completos'); // Mostrar un mensaje de "Datos completos" si no hay errores
       setInputs({
         name: '',
         email: '',
@@ -62,9 +70,16 @@ export default function Contact() {
         subject: '',
         message: '',
       }); // Setear los estados de inputs y errors en su estado original
-      setErrors({});
+      setErrors({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+      });
     } else {
-      window.alert('Debe llenar todos los campos'); // Mostrar un mensaje de "Debe llenar todos los campos" si hay errores
+     const alert = window.alert;
+      alert('Debe llenar todos los campos'); // Mostrar un mensaje de "Debe llenar todos los campos" si hay errores
     }
   }
 
