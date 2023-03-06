@@ -6,7 +6,7 @@ const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 export function validate(inputs) {
   const errors = {};
 
-  if (!inputs.name) {
+  if (!inputs.name) {          // 1 para cada caso
     errors.name = 'Se requiere un nombre';
   }
   if (!regexEmail.test(inputs.email)) {
@@ -35,6 +35,7 @@ export default function Contact() {
   });
 
   const [errors, setErrors] = React.useState({});
+  
 
   function handleChange(e) {
     setInputs({
@@ -53,7 +54,7 @@ export default function Contact() {
     e.preventDefault();
     const errorsArray = Object.values(errors); // Convertir el objeto errors en un array para medir su longitud
     if (errorsArray.length === 0) {
-      window.alert('Datos completados'); // Mostrar un mensaje de "Datos completos" si no hay errores
+      window.alert('Datos completos'); // Mostrar un mensaje de "Datos completos" si no hay errores
       setInputs({
         name: '',
         email: '',
@@ -63,7 +64,7 @@ export default function Contact() {
       }); // Setear los estados de inputs y errors en su estado original
       setErrors({});
     } else {
-      window.alert('Debes corregir todos los errores'); // Mostrar un mensaje de "Debe llenar todos los campos" si hay errores
+      window.alert('Debe llenar todos los campos'); // Mostrar un mensaje de "Debe llenar todos los campos" si hay errores
     }
   }
 
