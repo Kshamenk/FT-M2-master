@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2f242d99.css",
+    "main.js": "/static/js/main.c6f6708b.js",
+    "static/media/logo_henry.png": "/static/media/logo_henry.0653c6b28448329dc626.png",
+    "static/media/logo.jpg": "/static/media/logo.d2accf52ee4849412197.jpg",
+    "index.html": "/index.html",
+    "main.2f242d99.css.map": "/static/css/main.2f242d99.css.map",
+    "main.c6f6708b.js.map": "/static/js/main.c6f6708b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f242d99.css",
+    "static/js/main.c6f6708b.js"
+  ]
+}
