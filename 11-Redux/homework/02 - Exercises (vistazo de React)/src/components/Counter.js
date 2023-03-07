@@ -6,10 +6,19 @@ class Counter extends Component {
   // Extra Credit
   incrementIfOdd = () => {
     //Implementar una función de incremento que sólo aumenta si el valor del contador es impar
+    const contador = store.getState().contador;
+    if (contador % 2 !== 0) {
+      store.dispatch(increment());
+    }
   };
   // Extra Credit
   incrementAsync = () => {
     //  Implementar una función de incremento que aumenta después de esperar un segundo
+    incrementAsync = () => {
+      setTimeout(() => {
+        store.dispatch(increment());
+      }, 1000);
+    };
   };
 
   render() {
@@ -20,25 +29,20 @@ class Counter extends Component {
         Clickeado: {this.props.count} veces
         <button
           onClick={() => {
-            /* Completar */
+            this.props.increment();
           }}
         >
           + {/* Incremeta */}
         </button>
         <button
           onClick={() => {
-            /* Completar */
+            this.props.decrement();
           }}
         >
           - {/* Decrementa */}
         </button>
-        {/* Si quieres hacer los extra credit puede descomentar las líneas de abajo */}
-        {/* <button onClick={this.incrementIfOdd}>
-                    incrementa si es impar
-                </button>
-                <button onClick={this.incrementAsync}>
-                    Incrementa después de un segundo
-                </button>  */}
+        <button onClick={this.incrementIfOdd}></button>  {/*comentar aca es dificil. le asigno una propiedad onclick haciendo r a this incre...blabla*/}
+        <button onClick={this.incrementAsync}></button>
       </p>
     );
   }
@@ -51,7 +55,7 @@ class Counter extends Component {
 // recibiría sólo las partes relevantes que necesita del objeto de estado.
 const mapStateToProps = (state) => {
   return {
-    count: state.count,
+    count: state.count,    //que me retorne el valor actualizado de count
   };
 };
 
@@ -60,3 +64,4 @@ const mapStateToProps = (state) => {
 //Pasamos todas las funciones que dependen de Redux, junto con el propio componente,
 // para que Redux se dé a conocer a este componente.
 export default connect(mapStateToProps, { increment, decrement })(Counter);
+//esto ya estaba hecho
