@@ -1,23 +1,32 @@
 import { connect } from "react-redux";
 import React from "react";
+import Card from '../Card/Card';
 import "./products.css";
-//El componente Card lo exportamos haciendo destructuring para poder testearlo
-// import Card from '../Card/Card'
 
-export function Products() {
+function Products({ list }) {
   return (
     <>
       <div className="productsBg">
         <h1 className="productsTl">HENRY MARKET</h1>
-
         <div className="productsList">
-          {/* ¡Renderiza aquí todas tus cards! */}
+          {list.map((product) => (
+            <Card
+              key={product.id}
+              name={product.name}
+              price={product.price}
+              id={product.id}
+            />
+          ))}
         </div>
       </div>
     </>
   );
 }
 
-export function mapStateToProps() {}
+export function mapStateToProps(state) {
+  return {
+    list: state.list,
+  }
+}
 
 export default connect(mapStateToProps, null)(Products);

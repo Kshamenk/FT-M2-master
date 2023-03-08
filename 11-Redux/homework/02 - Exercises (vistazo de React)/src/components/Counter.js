@@ -3,6 +3,12 @@ import { connect } from "react-redux";
 import { increment, decrement } from "../actions";
 
 class Counter extends Component {
+  constructor(props){
+    return this.super(props)
+  }
+    
+  
+  
   // Extra Credit
   incrementIfOdd = () => {
     //Implementar una función de incremento que sólo aumenta si el valor del contador es impar
