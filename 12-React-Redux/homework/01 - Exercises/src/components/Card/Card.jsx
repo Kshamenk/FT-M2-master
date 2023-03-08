@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./card.css";
-import { deleteProduct } from "../../actions/index";
+import { deleteProduct } from "../../redux/actions/actions.js";
 
 export function Card({ name, price, id, deleteProduct }) {
 
