@@ -3,20 +3,24 @@ import React from "react";
 import Card from '../Card/Card';
 import "./products.css";
 
-function Products({ list }) {
+export function Products({ list }) {
   return (
     <>
       <div className="productsBg">
         <h1 className="productsTl">HENRY MARKET</h1>
         <div className="productsList">
-          {list.map((product) => (
-            <Card
+          {
+            list.map((product) => {
+              return (
+                <Card
               key={product.id}
               name={product.name}
               price={product.price}
               id={product.id}
             />
-          ))}
+              )
+            })
+          }
         </div>
       </div>
     </>
